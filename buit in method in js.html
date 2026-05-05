@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js HTML methods</title>
+    </head>
+
+    <body>
+        <h1 id="main-title">Original Title</h1>
+        <div id="container"></div>
+        <button id="update-btn">Update page</button>
+
+        <script>
+            const btn = document.getElementById('update-btn');
+            const title = document.getElementById('main-title');
+            const container = document.querySelector('#container');
+
+              btn.addEventListener('click', function() {
+
+                title.innerHTML = "Title Updated via Javascript!";
+                title.style.color = "blue";
+
+                const newParagraph = document.createElement('p');
+                newParagraph.textContent = "This is a new paragraph added to the DOM.";
+                container.appendChild(newParagraph);
+
+                console.log("Update completed.");
+              });
+        </script>
+
+    </body>
+</html>
